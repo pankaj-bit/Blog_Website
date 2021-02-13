@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') -%>
+
+<h1>Home</h1>
+<p> <%- home %></p>
+<div id="panels">
+<% for(var i=0;i<allposts.length;i++){   %>
+      
+    <h1> <%= allposts[i].title %></h1>
+  <!--  <p> <%= allposts[i].content + "... " %><a href="/posts/<%= allposts[i].title%>">Read More</a> </p>  -->
+  <p> <%= allposts[i].content + "... " %><a href="/posts/<%= allposts[i]._id %>">Read More</a> </p> 
+
+<% } %>
+
+</div>
+
+
+<%- include('partials/footer.ejs') -%>
